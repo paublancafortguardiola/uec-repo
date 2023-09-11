@@ -1,0 +1,1 @@
+ 1, puigmal, 1293, 10, Sí, casa, , 2, hola, 100, 1, No, caca, , 3, puigmal, 321, 18, No, casa, , 4, , desnivell màxim, distància màxima, no cal tren, , 
