@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Repositori Sortides</title>
 </head>
 <body>
     <h1>
         Repositori de sortides de la UEC de Gràcia
     </h1>
     <h2>
-        Buscar una sortida
+        Busca una sortida
     </h2>
     <h3>
         <form action="/buscar" method="POST">
@@ -64,17 +64,17 @@
             </select>
 
             <select name="tren">
-            <option value="no cal tren" selected> no cal tren </option>
-            <option value="Sí"> sí que cal tren </option>
+            <option value="no cal tren" selected> amb bus o tren </option>
+            <option value="Sí"> amb tren </option>
             </select>  
 
             <input type="text" name="lloc_dormir" placeholder="lloc on dormir">
 
-            <button type="submit" class="filter-button"> Filtra </button>  
+            <button type="submit" class="filter-button"> Busca! </button>  
         </form>
     </h3>
     <h2>
-        Imprimir una sortida
+        Obra una sortida
     </h2>
     <h3>
         <form action="/imprimir" method="POST">
@@ -82,7 +82,7 @@
         </form>
     </h3>
     <h2> 
-        Crear una sortida
+        Crea una sortida
     </h2>
     <h3>
         <form action="/crear" method="POST">
@@ -138,15 +138,18 @@
             </select>
 
             <select name="tren">
-            <option value="no cal tren" selected> no cal tren </option>
-            <option value="Sí"> sí que cal tren </option>
+            <option value="No" selected> accés amb bus </option>
+            <option value="Sí"> accés amb tren </option>
             </select>  
 
             <input type="text" name="lloc_dormir" placeholder="lloc on dormir">
 
-            <br/> <input type="text" name="descripcio" placeholder="descripcio">
+            <br>
+            <textarea name="descripcio" rows="4" cols="50">
+                descripció...
+            </textarea>
 
-            <button type="submit" class="boto_de_crear"> Crear </button>  
+            <button type="submit" class="boto_de_crear"> Crea! </button>  
         </form>
     </h3>
     
