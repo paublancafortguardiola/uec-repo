@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repositori Sortides</title>
+</head>
+<body>
+    <h1>
+        Repositori de sortides de la UEC de Gràcia
+    </h1>
+    <h2>
+        <br/> Busca una sortida
+    </h2>
+    <h3>
+        Aquí es poden trobar totes les sortides que compleixin una sèrie d'atributs. Es pot restringir el desnivell màxim, la distància màxima, si es poden fer amb tren i si es va a dormir a algun lloc concret.
+    </h3>
+    <h3>
+        <form action="/buscar" method="POST">
+
+            <select name="desnivell">
+            <option value="desnivell màxim" selected> desnivell màxim</option>
+            <option value="100">100</option>
+            <option value="200">200</option>
+            <option value="300">300</option>
+            <option value="400">400</option>
+            <option value="500">500</option>
+            <option value="600">600</option>
+            <option value="700">700</option>
+            <option value="800">800</option>
+            <option value="900">900</option>
+            <option value="1000">1000</option>
+            <option value="1100">1100</option>
+            <option value="1200">1200</option>
+            <option value="1300">1300</option>
+            <option value="1400">1400</option>
+            <option value="1500">1500</option>
+            <option value="1600">1600</option>
+            <option value="1700">1700</option>
+            <option value="1800">1800</option>
+            <option value="1900">1900</option>
+            <option value="2000">2000</option>
+            </select>
+
+            <select name="distancia">
+            <option value="distància màxima" selected> distància màxima</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            </select>
+
+            <select name="tren">
+            <option value="no cal tren" selected> amb bus o tren </option>
+            <option value="Sí"> amb tren </option>
+            </select>  
+
+            <input type="text" name="lloc_dormir" placeholder="lloc on dormir">
+
+            <button type="submit" class="filter-button"> Busca! </button>  
+        </form>
+    </h3>
+    <h2>
+        <br/> Obre una sortida
+    </h2>
+    <h3>
+        A l'escriure un nombre a la casella de continuació, sortirà amb tots els detalls la sortida que li correspon. Si no se sap el número de la sortida que es vol obrir, és recomanable de cercar-la amb el menú "Busca", que també permet obrir sortides. 
+    </h3>
+    <h3>
+        <form action="/obrir" method="POST">
+            <input type="text" name="número_sortida" placeholder="número de la sortida">
+        </form>
+    </h3>
+    <h2> 
+        <br/> Crea una sortida
+    </h2>
+    <h3>
+        Als requadres de sota es pot caracteritzar una sortida i guardar-la al repositori. Abans de clicar "Crea!"", cal tenir present que de moment la pàgina no permet modificar sortides i, per tant, qualsevol error no es podrà corregir.
+    </h3>
+    <h3>
+        <form action="/crear" method="POST">
+            
+            <input type="text" name="nom" placeholder="nom"><br/>
+
+            <select name="desnivell">
+            <option value="desnivell màxim" selected> desnivell màxim</option>
+            <option value="100">100</option>
+            <option value="200">200</option>
+            <option value="300">300</option>
+            <option value="400">400</option>
+            <option value="500">500</option>
+            <option value="600">600</option>
+            <option value="700">700</option>
+            <option value="800">800</option>
+            <option value="900">900</option>
+            <option value="1000">1000</option>
+            <option value="1100">1100</option>
+            <option value="1200">1200</option>
+            <option value="1300">1300</option>
+            <option value="1400">1400</option>
+            <option value="1500">1500</option>
+            <option value="1600">1600</option>
+            <option value="1700">1700</option>
+            <option value="1800">1800</option>
+            <option value="1900">1900</option>
+            <option value="2000">2000</option>
+            </select>
+
+            <select name="distancia">
+            <option value="distància màxima" selected> distància màxima</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            </select>
+
+            <select name="tren">
+            <option value="No" selected> accés amb bus </option>
+            <option value="Sí"> accés amb tren </option>
+            </select>  
+
+            <input type="text" name="lloc_dormir" placeholder="lloc on dormir">
+
+            <br>
+            <textarea name="descripcio" rows="1" cols="50" placeholder="descripció">
+            </textarea>
+
+            <button type="submit" class="boto_de_crear"> Crea! </button>  
+        </form>
+    </h3>
+    <h2>
+        <br/> Mira l'historial personal
+    </h2>
+    <h3>
+        S'obrirà la llista de sortides a les quals ha participat la persona que es busqui i les dates en què ho hagi fet.
+    </h3>
+    <h3>
+        <form action="/historial_personal" method="POST">
+            <input type="text" name="nom" placeholder="nom">
+        </form>
+    </h3>   
+    <h2>
+        <br/> Afegeix una persona
+    </h2>
+    <h3>
+        Als requadres de sota es pot caracteritzar una persona i guardar-la al repositori. Abans de clicar "Afegeix!"", cal tenir present que de moment la pàgina no permet modificar persones i, per tant, qualsevol error no es podrà corregir.
+    </h3>
+    <h3>
+            <form action="/afegir_persona" method="POST">
+            <input type="text" name="nom" placeholder="nom">
+            <input type="text" name="any_naixement" placeholder="any de naixement (AAAA)">
+            <button type="submit" class="boto_d_afegir"> Afegeix! </button>
+        </form>
+    </h3>   
+</body>
+</html>

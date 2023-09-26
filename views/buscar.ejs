@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repositori Sortides</title>
+</head>
+<body>
+    <h1>
+        Buscar <br/>
+    </h1>
+    <h3>
+        Les sortides que apareixen a continuació són totes les que coincideixen amb els filtres seleccionats. Clicant al botó de la columna de més a la dreta s'obra en detall la sortida corresponent.<br/>
+    </h3>
+    <h3><br/>
+        <font face="Courier New">  <%= capçalera %> </font> <br/> <br/>
+        <% for (var i =0; i < text.split(', ').length;  i++ ) { %> 
+            <% text_boto =  numeros_sortides.split(',')[i].toString() %>
+            <form action="/obrir" method="POST">
+                <font face="Courier New">  
+                    <%= text.split(", ")[i] %> 
+                    obre la sortida <input type="submit" name="número_sortida" value= <%=text_boto%> >
+                </font>
+            </form>
+        <% } %>
+    </h3>
+</body>
+</html>

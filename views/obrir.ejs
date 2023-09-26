@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repositori Sortides</title>
+</head>
+<body>
+    <h1>
+        <%= text1 %>
+    </h1>
+    <h2>
+        <br/> desnivell màxim (m): 
+        <%= text2 %>
+
+        <br/> distància màxima (km): 
+        <%= text3 %>
+
+        <br/> accés amb tren: 
+        <%= text4 %>
+
+        <br/> lloc on dormir: 
+        <%= text5 %>
+        
+        <br/>
+        <br/> descripció: <br/>
+        <%= text6 %>
+        
+        <br/>
+        <br/><form action="/historial" method="POST"> 
+            veure historial <input type="submit" name="número_sortida" value= <%= text0 %> >
+        </form>
+    </h2>
+</body>
+</html>

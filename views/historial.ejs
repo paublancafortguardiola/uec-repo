@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repositori Sortides</title>
+</head>
+<body>
+    <h1>
+        Historial
+        <br>
+    </h1>
+    <h2>
+        <br/>Afegir una nova entrada a l'historial
+    </h2>
+    <h3>
+        Aquí es pot guardar el nom dels participants que han fet aquesta sortida a la data indicada. Per facilitar aquest procediment, en primer lloc cal indicar la data i les generacions implicades, i després seleccionar els participants.
+    </h3>
+
+    <h3>
+        <form action="/entrar_historial" method="POST">
+
+            <input type="text" name="data" placeholder="DD/MM/AAAA">
+
+            <br/><input type="text" name="moni1" placeholder="nom monitora">
+            <br/><input type="text" name="moni2" placeholder="nom monitora">
+            <br/><input type="text" name="moni3" placeholder="nom monitora">
+            <br/><input type="text" name="moni4" placeholder="nom monitora">
+            <br/><input type="text" name="moni5" placeholder="nom monitora">
+            <br/><input type="text" name="moni6" placeholder="nom monitora">
+            <br/><input type="text" name="moni7" placeholder="nom monitora">
+            
+            <br/><br/>Generacions dels participants
+            <br/><input type="text" name="generacio1" placeholder="AAAA">
+            <br/><input type="text" name="generacio2" placeholder="AAAA">
+            <br/><input type="text" name="generacio3" placeholder="AAAA">
+            <br/><input type="text" name="generacio4" placeholder="AAAA">
+
+            <br/><br/><button type="submit" class="filter-button"> Següent </button>  
+        </form>
+    </h3>
+    <h2>
+        <br/><br/><br/>Historial actual de la sortida
+    </h2>
+    <h3>
+        <br>
+        <% for (var i =0; i < historial.split(', ').length;  i++ ) { %> 
+            <%= historial.split(", ")[i] %> <br>
+        <% } %>
+    </h3>
+    
+</body>
+</html>
