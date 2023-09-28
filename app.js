@@ -438,6 +438,3 @@ fs.readFile('persones.txt', 'utf-8', (err, persones_list) => {
 
 // Listen on port 3000
 app.listen(port, () => console.info(`Listening on port ${port}`))
-
-// Listen on port 3000
-app.listen(port, () => console.info(`Listening on port ${port}`))
