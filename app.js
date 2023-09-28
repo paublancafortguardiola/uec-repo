@@ -384,6 +384,7 @@ class Persona {
 // Extreure el diccionari de sortides del fitxer de text corresponent
 fs.readFile('sortides.txt', 'utf-8', (err, sortides_list) => {
     if (err) throw err;
+    sortides_list = sortides_list.replace("\n", "")
     sortides_list = sortides_list.split("; ")
     for (let i = 0; i < sortides_list.length/8; i++){
         sortides[(i+1).toString()] = new Sortida(i+1, sortides_list[i*8+1], sortides_list[i*8+2], sortides_list[i*8+3], sortides_list[i*8+4], sortides_list[i*8+5], sortides_list[i*8+6], sortides_list[i*8+7])
@@ -394,6 +395,7 @@ fs.readFile('sortides.txt', 'utf-8', (err, sortides_list) => {
 // Extreure el diccionari de persones del fitxer de text corresponent
 fs.readFile('persones.txt', 'utf-8', (err, persones_list) => {
     if (err) throw err;
+    persones_list = persones_list.replace("\n", "")
     persones_list = persones_list.split("; ")
     console.log(persones_list)
     for (let i = 0; i < persones_list.length/3; i++){
