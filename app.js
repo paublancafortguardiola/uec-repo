@@ -321,28 +321,6 @@ app.post('/afegir_persona', (req,res) => {
     });
     console.log(persones_list)
 
-    // Extreure el diccionari de persones del fitxer de text corresponent
-    fs.readFile('persones.txt', 'utf-8', (err, persones_list) => {
-        if (err) throw err;
-        persones_list = persones_list.replace("\n", "")
-        persones_list = persones_list.split("; ")
-        console.log(persones_list)
-        for (let i = 0; i < persones_list.length/3; i++){
-            persones[persones_list[i*3]] = new Persona(persones_list[i*3], persones_list[i*3+1], persones_list[i*3+2])
-        }
-
-        console.log(persones)
-        for (const [key, value] of Object.entries(persones)) {
-            if (grups[value.any_naixement]){
-                grups[value.any_naixement] = grups[value.any_naixement] + `, ${value.nom}`
-            }
-            else {
-                grups[value.any_naixement] =  `${value.nom}`
-            }
-        }
-        console.log(grups)
-    })
-
     res.render('index', {})
 })
 //.......................................................................
@@ -417,6 +395,7 @@ fs.readFile('sortides.txt', 'utf-8', (err, sortides_list) => {
 // Extreure el diccionari de persones del fitxer de text corresponent
 fs.readFile('persones.txt', 'utf-8', (err, persones_list) => {
     if (err) throw err;
+    console.log(persones_list)
     persones_list = persones_list.replace("\n", "")
     persones_list = persones_list.split("; ")
     console.log(persones_list)
